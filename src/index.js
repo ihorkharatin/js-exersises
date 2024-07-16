@@ -1,8 +1,4 @@
-# [TASKS](https://habr.com/ru/post/681882/)
-
-## Task 1
-
-```js
+//!======================================================
 setTimeout(function timeout() {
   console.log("1");
 }, 0);
@@ -17,13 +13,7 @@ p.then(function () {
 });
 
 console.log("4");
-```
-
----
-
-## Task 2
-
-```js
+//!======================================================
 console.log(1);
 
 setTimeout(() => console.log(2));
@@ -37,13 +27,7 @@ Promise.resolve().then(() => console.log(5));
 setTimeout(() => console.log(6));
 
 console.log(7);
-```
-
----
-
-## Task 3
-
-```js
+//!======================================================
 console.log(1);
 
 setTimeout(() => console.log(2));
@@ -57,13 +41,7 @@ Promise.resolve(5).then(console.log);
 console.log(6);
 
 setTimeout(() => console.log(7), 0);
-```
-
----
-
-## Task 4
-
-```js
+//!======================================================
 const myPromise = (delay) =>
   new Promise((res, rej) => {
     setTimeout(res, delay);
@@ -76,17 +54,9 @@ setTimeout(() => console.log("5"), 2000);
 myPromise(1000).then((res) => console.log("6"));
 setTimeout(() => console.log("7"), 1000);
 myPromise(5000).then((res) => console.log("8"));
-```
-
----
-
-<br /><br /><br /><br />
-
-# [TASKS 2](https://russianblogs.com/article/33321448227/)
-
-## Task 1
-
-```js
+//!======================================================
+//!======================================================
+//!======================================================
 setTimeout(() => {
   console.log(1);
 }, 0);
@@ -97,13 +67,7 @@ new Promise((resolve, reject) => {
   console.log(3);
 });
 console.log(4);
-```
-
----
-
-## Task 2
-
-```js
+//!======================================================
 setTimeout(function () {
   console.log("s1");
 }, 0);
@@ -128,13 +92,7 @@ async function test2() {
 }
 test1();
 console.log("w2");
-```
-
----
-
-## Task 3
-
-```js
+//!======================================================
 Promise.resolve(1)
   .then((res) => {
     console.log(res);
@@ -146,13 +104,7 @@ Promise.resolve(1)
   .then((res) => {
     console.log(res);
   });
-```
-
----
-
-## Task 4
-
-```js
+//!======================================================
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     console.log("Start");
@@ -170,13 +122,7 @@ promise.then((res) => {
 promise.then((res) => {
   console.log(res, Date.now() - start);
 });
-```
-
----
-
-## Task 5
-
-```js
+//!======================================================
 console.log(1);
 
 setTimeout(() => {
@@ -210,17 +156,9 @@ setTimeout(() => {
 });
 
 console.log(10);
-```
-
----
-
-<br /><br /><br /><br />
-
-# [TASKS 3](https://www.google.com/amp/s/habr.com/ru/amp/post/582914/)
-
-## Task 1
-
-```js
+//!======================================================
+//!======================================================
+//!======================================================
 Promise.resolve("1")
   .then((data) => {
     console.log(data);
@@ -234,47 +172,24 @@ Promise.resolve("1")
   .then((data) => {
     console.log(data);
   });
-```
-
----
-
-## Task 2
-
-```js
+//!======================================================
 Promise.reject(1)
   .then((data) => {
     console.log(data);
   })
   .then(null, (data) => console.log(data))
   .then(() => console.log("ok"));
-```
+//!======================================================
+Promise.reject().then(
+  (data) => console.log("ok"),
+  (data) => console.log("error")
+);
+//!======================================================
 
----
-
-## Task 3
-
-```js
-Promise.reject()
-    .then(
-        data => console.log('ok'),
-        data => console.log('error')
-```
-
----
-
-## Task 4
-
-```js
 Promise.resolve("1")
   .then(null)
   .then((data) => console.log(data));
-```
-
----
-
-## Task 5
-
-```js
+//!======================================================
 Promise.reject("Api Error")
   .then((data) => console.log("ok"))
   .catch((error) => {
@@ -284,13 +199,7 @@ Promise.reject("Api Error")
   .then((data) => {
     console.log(data);
   });
-```
-
----
-
-## Task 6
-
-```js
+//!======================================================
 Promise.reject()
   .catch(() => {
     console.log("error1");
@@ -300,13 +209,7 @@ Promise.reject()
   .catch(() => {
     console.log("error2");
   });
-```
-
----
-
-## Task 7
-
-```js
+//!======================================================
 Promise.resolve()
   .then((data) => {
     throw new Error("Api Error");
@@ -322,13 +225,7 @@ Promise.resolve()
   .then((data) => {
     console.log(data);
   });
-```
-
----
-
-## Task 8
-
-```js
+//!======================================================
 Promise.resolve().then(() => {
   throw new Error("Api Error");
 });
@@ -336,25 +233,13 @@ Promise.resolve().then(() => {
 setTimeout(() => {
   console.log("setTimeout");
 }, 1000);
-```
-
----
-
-## Task 9
-
-```js
+//!======================================================
 Promise.reject("Api Error")
   .catch(null)
   .then((data) => console.log("ok"))
   .catch((error) => console.log(error))
   .then((data) => console.log("ok"));
-```
-
----
-
-## Task 10
-
-```js
+//!======================================================
 Promise.resolve()
   .then(() => {
     return "1";
@@ -366,23 +251,11 @@ Promise.resolve()
   })
 
   .then((data) => console.log(data));
-```
-
----
-
-## Task 11
-
-```js
+//!======================================================
 Promise.reject().finally((data) => {
   console.log("finally");
 });
-```
-
----
-
-## Task 12
-
-```js
+//!======================================================
 Promise.resolve()
   .then(() => console.log(1))
   .then(() => console.log(2));
@@ -390,13 +263,7 @@ Promise.resolve()
 Promise.resolve()
   .then(() => console.log(11))
   .then(() => console.log(12));
-```
-
----
-
-## Task 13
-
-```js
+//!======================================================
 Promise.resolve()
   .then(() => console.log(1))
   .then(() => {
@@ -414,18 +281,10 @@ Promise.resolve()
   })
   .catch(() => console.log(13))
   .then(() => console.log(14));
-```
-
----
-
-## Task 14
-
-```js
+//!======================================================
 const foo = () => {
   Promise.resolve().then(() => foo());
 };
 
 foo();
-```
-
----
+//!======================================================
