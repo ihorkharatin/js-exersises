@@ -109,8 +109,8 @@
 // Виведи довжину рядка в консоль.
 // ```
 
-const somestring = 'string';
-console.log(somestring.length);
+// const somestring = 'string';
+// console.log(somestring.length);
 
 // ---
 
@@ -120,11 +120,13 @@ console.log(somestring.length);
 // Створи змінну lastLetter і присвой їй останню літеру рядка someString.
 // ```
 
-const someString = 'This is string';
-const firstLetter = someString[0];
-const lastLetter = someString[-1]; //!!!!!!!!!
-console.log(firstLetter);
-console.log(lastLetter);
+// const someString = 'This is string of the row';
+// const someStringlength = someString.length;
+// const firstLetter = someString[0];
+// const lastLetter = someString[someStringlength - 1];
+
+// console.log(firstLetter);
+// console.log(lastLetter);
 
 // ---
 
@@ -135,7 +137,13 @@ console.log(lastLetter);
 // Приклад: для рядків "HELLO" та "WORLD" результатом буде рядок "OD"
 // ```
 
-const srt1 = 'HELLO'; //!!!!!!!!!!!!!!!!!!!!!
+// const str1 = 'HELLO';
+// const str2 = 'WORLD';
+// const str1Last = str1[str1.length - 1];
+// const str2last = str2[str2.length - 1];
+// const strSum = str1Last + str2last;
+
+// console.log(strSum);
 
 // ---
 
@@ -151,7 +159,9 @@ const srt1 = 'HELLO'; //!!!!!!!!!!!!!!!!!!!!!
 // для числа 12 = 12 * 5^2 = 300;
 // для числа 512 = 512 * 5^3 = 64000;
 
-const userValue = 2; //!!!!!!!!!!!!!!!!!!!!
+// const userValue = 512;
+// const len = userValue.toFixed().toString().length;
+// const result = userValue * 5 ** len;
 
 // ```
 
@@ -162,7 +172,34 @@ const userValue = 2; //!!!!!!!!!!!!!!!!!!!!
 
 // const apples = 47;
 // const grapes = 135;
-// const total = ;
-// console.log(total)
-// const diff = ;
-// console.log(diff)
+// const total = apples + grapes;
+// console.log(total);
+// const diff = apples - grapes;
+// console.log(diff);
+
+// Замінити вираз перевизначення комбінованим оператором `+=`.
+
+// let students = 100;
+// students += 50;
+// console.log(students);
+
+// Розбери пріоритет операторів в інструкції визначення значення змінної
+// `result`.
+
+// const result = 108 + 223 - 2 * 5;
+// console.log(result);
+// ```
+
+// ---
+
+// ```
+// Склади фразу за допомогою шаблонних рядків `A has B bots in stock`, де A, B -
+// змінні вставлені у рядок.
+
+// const companyName = 'Cyberdyne Systems';
+// const repairBots = 150;
+// const defenceBots = 50;
+// const sumBots = repairBots + defenceBots;
+// const message = `${companyName} has ${sumBots} bots in stock`;
+// console.log(message); // "Cyberdyne Systems has 200 bots in stock"
+// // ```
