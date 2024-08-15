@@ -198,22 +198,46 @@
 // Задача-14
 // Напишіть функцію, яка приймає два параметри: hasGlutenAllergy (булевий) та containsGluten (булевий). Якщо у вас є алергія на глютен і продукт містить глютен, поверніть "Не можна їсти", в іншому випадку поверніть "Можна їсти".
 // ```
-
+// function task14(hasGlutenAllergy, containsGluten) {
+//     if (hasGlutenAllergy && containsGluten) {
+//         return "it is not allowed to eat";
+//     } else {
+//         return "it is allowed to eat";
+//     }
+// }
 // ```
 // Задача-15
 // Напишіть функцію, яка приймає один параметр age. Якщо вік менше 18, поверніть "Не можна купувати алкоголь", якщо 18 або більше, поверніть "Можна купувати алкоголь".
 // ```
-
+// function task15(age) {
+//   if (age < 18) {
+//     return 'it is not allowed to buy alcohol';
+//   } else {
+//     return "it is allowed to buy alcohol"
+//   }
+// }
 // ```
 // Задача-16
 // Напишіть функцію, яка приймає один параметр isSunny (булевий). Якщо сонячно, поверніть "Вийдемо на прогулянку", якщо ні, поверніть "Залишимося вдома".
 // ```
-
+// function task16(isSunny) {
+//     if (isSunny) {
+//         return "We shall go for a walk";
+//     } else {
+//         return "We shalll stay at home"
+//     }
+// }
 // ```
 // Задача-17
 // Напишіть функцію, яка приймає один параметр number. Якщо число парне, поверніть "Парне", якщо непарне, поверніть "Непарне".
 // ```
-
+function task17(number) {
+  if (number % 2 === 0) {
+    return 'It is even number';
+  } else {
+    return 'It is not even number';
+  }
+}
 // ```
 // Задача-18
 // Напишіть функцію, яка приймає два параметри: password та confirmPassword. Якщо ці два паролі однакові, поверніть "Паролі збігаються", якщо ні, поверніть "Паролі не збігаються".
