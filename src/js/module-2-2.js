@@ -108,16 +108,16 @@
 // }
 // 1. Напиши цикл, який виведе на консоль кожну другу літеру слова "JavaScript".
 
-const message = 'JavaScript';
+// const message = 'JavaScript';
 // for (let i = 0; i < message.length; i += 2) {
 //   console.log(message[i]);
 // }
 
-for (let i = 0; i < message.length; i += 1) {
-  if (i % 2 === 0) {
-    console.log(message[i]);
-  }
-}
+// for (let i = 0; i < message.length; i += 1) {
+//   if (i % 2 === 0) {
+//     console.log(message[i]);
+//   }
+// }
 
 // 1. Напиши функцію, яка приймає рядок та повертає перевернутий рядок
 // 1. Напиши функцію, яка приймає рядок та повертає рядок де кожен другий символ у
