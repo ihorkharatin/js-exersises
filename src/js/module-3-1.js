@@ -162,32 +162,126 @@
 
 // 1. Напиши функцію яка приймає два масиви (arr1, arr2), та повертає новий масив
 //    де будуть лише ті елементи які зустрічаються і в arr1 і arr2.
-function task12(arr1, arr2) {
-  let arr3 = [];
-  let arr4 = arr1 + arr2;
-  for (let i = 0; i < arr4; i += 1) {}
-}
+// function task12(arr1, arr2) {
+//   let arr3 = [];
+
+//   for (let i = 0; i < arr1.length; i += 1) {
+//     if (arr2.includes(arr1[i])) {
+//       arr3.push(arr1[i]);
+//     }
+//   }
+//   return arr3;
+// }
+// console.log(task12([1, 2, 4, 6], [0, 2, 4, 8]));
+
 // 1. Напиши функцію яка приймає два масиви (arr1, arr2), та повертає новий масив
 //    де будуть лише елементи масиву arr1 яких не має у масиві arr2.
+
+// function task13(arr1, arr2) {
+//   let arr3 = [];
+//   for (let i = 0; i < arr1.length; i += 1) {
+//     if (!arr2.includes(arr1[i])) {
+//       arr3.push(arr1[i]);
+//     }
+//   }
+//   return arr3;
+// }
+
+// console.log(task13([0, 1, 2, 3, 4], [2, 4, 6, 8]));
+
 // 1. Напиши функцію яка приймає масив та знаходить мінімальний елемент.
+// function task14(array) {
+//   let min = Infinity;
+//   for (i = 0; i < array.length; i += 1) {
+//     if (array[i] <= min) {
+//       min = array[i];
+//     }
+//   }
+//   return min;
+// }
+// console.log(task14([258, 59, 263, 54]));
+
 // 1. Напиши функцію яка приймає масив та знаходить максимальний елемент.
+
+// function task15(array) {
+//   let max = -Infinity;
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] >= max) {
+//       max = array[i];
+//     }
+//   }
+//   return max;
+// }
+
+// console.log(task15([1, 5, 56, 489]));
+
 // 1. Напиши функцію яка приймає масив та повертає масив лише з тих елементів які
 //    більші за середнє значення всіх елементів масиву.
+
+// function task16(array) {
+//   let sum = 0;
+//   let arr1 = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     sum += array[i];
+//   }
+//   let middleSum = sum / array.length;
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] > middleSum) {
+//       arr1.push(array[i]);
+//     }
+//   }
+//   return arr1;
+// }
+// console.log(task16([1, 2, 3, 4, 5]));
+
 // 1. Напиши функцію яка приймає масив та повертає масив лише з тих елементів які
 //    більші за власний індекс.
+// function task17(array) {
+//   let array1 = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] > i) {
+//       array1.push(array[i]);
+//     }
+//   }
+//   return array1;
+// }
+// console.log(task17([7, 6, 4, 3, 9, 5]));
+
 // 1. Напишіть функці яка приймає масив чисел. Функція повинна занйти мінімальний
 //    елемент та видалити його з масиву.
 // 1. Напиши функцію яка приймає два параметри start та end. Функія повина
 //    повернути масив де будуть числа з діапазону але лише ті у яких не має
 //    цифри 5. К прикладу числа (51, 25, 15,256) не підходять бо містять символ "5"
 //    у собі.
+// function task18(start, end) {
+//   let array = [];
+//   for (let i = start; i < end; i += 1) {
+//     if (!i.toString().includes(5)) {
+//       array.push(i);
+//     }
+//   }
+//   return array;
+// }
+// console.log(task18(51, 256));
 
 // ## Складні
 
 // 1. Напиши функцію, яка приймає массив чисел і повертає новий масив, де всі парні
 //    числа переміщені в початок, а всі непарні - в кінець.
+
 // 1. Напиши функцію, яка приймає массив чисел і повертає новий массив, де кожен
 //    елемент є сумою усіх попередніх елементів.
+// function task19(array) {
+//   let array1 = [];
+//   let sum = 0;
+//   for (let i = 0; i < array.length; i += 1) {
+//     sum += array[i];
+//     array1.push(sum);
+//   }
+//   return array1;
+// }
+// console.log(task19([1, 2, 3, 4, 5]));
+
 // 1. Напиши функцію, яка приймає массив чисел і повертає новий массив, що містить
 //    лише унікальні числа.
 // 1. Напиши функцію, яка приймає два масиви і повертає об'єднаний массив без
