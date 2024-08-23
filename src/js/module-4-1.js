@@ -208,16 +208,16 @@ const user4 = task1('Petro', 21);
 // ```
 // Напиши функцію, яка приймає об'єкт і повертає true, якщо властивість "address" існує в об'єкті, і false, якщо ні.
 // ```
-function task6(object) {
-  if (object.hasOwnProperty('userAddress')) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function task6(object) {
+//   if (object.hasOwnProperty('userAddress')) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-const updateUser = task6(user1);
-console.log(updateUser);
+// const updateUser = task6(user1);
+// console.log(updateUser);
 
 // ---
 
