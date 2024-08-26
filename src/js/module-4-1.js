@@ -227,6 +227,19 @@ const user4 = task1('Petro', 21);
 // Поверни результат.
 // ```
 
+// const object1 = {
+//   x: 1,
+//   y: 2,
+//   t: 3,
+// };
+
+// function task7(object1, object2) {
+//   const newObject = {
+//     ...object1,
+//     ...object2,
+//   };
+//   return newObject;
+// }
 // ---
 
 // ```
@@ -235,11 +248,33 @@ const user4 = task1('Petro', 21);
 // Поверни об'єкт.
 // ```
 
+// function task8(objectName = 'Unknown', objectAge = 0, objectAdress) {
+//   const object = {
+//     objectName: objectName,
+//     objectAge: objectAge,
+//     objectAdress: objectAdress,
+//   };
+//   return object;
+// }
+
+// console.log(task8('Petro', 26, 'Kyiv'));
+
 // ---
 
 // ```
 // Напиши функцію, яка приймає об'єкт та нові значення для імені та віку. Функція повинна змінити обидві властивості в об'єкті. Поверни оновлений об'єкт.
 // ```
+// const user = {
+//   userName: 'Petro',
+//   userAge: 27,
+// };
+// function task9(object, newName, newAge) {
+//   object.userName = newName;
+//   object.userAge = newAge;
+//   return object;
+// }
+
+// console.log(task9(user, 'Ivan', 36));
 
 // ---
 
@@ -249,12 +284,20 @@ const user4 = task1('Petro', 21);
 // Поверни оновлений об'єкт.
 // ```
 
-// ---
+// function task10(object, newEmail) {
+//   object.email = newEmail;
+//   object.email = object.email || newEmail;
+// }
 
 // ```
 // Напиши функцію, яка приймає об'єкт і змінює тип значення властивості "age" з числа на рядок.
 // Поверни оновлений об'єкт.
 // ```
+
+// function task11(object) {
+//   object.age = object.age.toString();
+//   return object;
+// }
 
 // ---
 
@@ -263,6 +306,12 @@ const user4 = task1('Petro', 21);
 // Якщо її немає, поверни об'єкт без змін.
 // ```
 
+// function task14(object, newAdress) {
+//   if ( object.adress ) {
+//     object.adress = newAdress;
+//   }
+//   return object;
+// }
 // ---
 
 // ```
@@ -346,6 +395,30 @@ const user4 = task1('Petro', 21);
 //     масиві контактів.
 
 // ---
+
+const contactBook = {
+  contacts: [],
+  addContact(contact) {
+    this.contacts.push(contact);
+  },
+  deleteContact(contactName) {
+    this.contacts = this.contacts.filter(el => el !== contactName);
+  },
+  findContact(contactName) {},
+};
+console.log(contactBook.contacts);
+contactBook.addContact('Ivan');
+contactBook.addContact('Petro');
+contactBook.addContact('Alex');
+contactBook.addContact('Vlad');
+contactBook.addContact('Ilyia');
+contactBook.addContact('Dmytro');
+
+console.log(contactBook.contacts);
+
+contactBook.deleteContact('Vlad');
+
+console.log(contactBook.contacts);
 
 // Створити об'єкт **rectangle**:
 
