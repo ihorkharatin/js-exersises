@@ -396,29 +396,34 @@ const user4 = task1('Petro', 21);
 
 // ---
 
-const contactBook = {
-  contacts: [],
-  addContact(contact) {
-    this.contacts.push(contact);
-  },
-  deleteContact(contactName) {
-    this.contacts = this.contacts.filter(el => el !== contactName);
-  },
-  findContact(contactName) {},
-};
-console.log(contactBook.contacts);
-contactBook.addContact('Ivan');
-contactBook.addContact('Petro');
-contactBook.addContact('Alex');
-contactBook.addContact('Vlad');
-contactBook.addContact('Ilyia');
-contactBook.addContact('Dmytro');
+// const contactBook = {
+//   contacts: [],
+//   addContact(contact) {
+//     this.contacts.push(contact);
+//   },
+//   deleteContact(contactName) {
+//     this.contacts = this.contacts.filter(el => el !== contactName);
+//   },
+//   findContact(contactName) {
+//     for ( let i = 0; i < this.contacts.length; i += 1);
+//     if ( this.contacts[i] === contactName) {
+//       return contactName;
+//     }
+//   },
+// };
+// console.log(contactBook.contacts);
+// contactBook.addContact('Ivan');
+// contactBook.addContact('Petro');
+// contactBook.addContact('Alex');
+// contactBook.addContact('Vlad');
+// contactBook.addContact('Ilyia');
+// contactBook.addContact('Dmytro');
 
-console.log(contactBook.contacts);
+// console.log(contactBook.contacts);
 
-contactBook.deleteContact('Vlad');
+// contactBook.deleteContact('Vlad');
 
-console.log(contactBook.contacts);
+// console.log(contactBook.contacts);
 
 // Створити об'єкт **rectangle**:
 
@@ -430,6 +435,19 @@ console.log(contactBook.contacts);
 //   - `perimeter()` - метод, що обчислює та повертає периметр прямокутника.
 
 // ---
+// const rectangle = {
+//   width: 20,
+//   height: 30,
+//   area() {
+//     return this.width * this.height;
+//   },
+//   perimeter() {
+//     return (this.width + this.height) * 2;
+//   },
+// };
+
+// console.log(rectangle.area());
+// console.log(rectangle.perimeter());
 
 // Створити об'єкт **toDoList**:
 
@@ -443,6 +461,32 @@ console.log(contactBook.contacts);
 
 // ---
 
+// const toDoList = {
+//   tasks: [],
+//   addTask(taskName) {
+//     const object = {
+//       taskName: taskName,
+//       isActive: false,
+//     };
+//     this.tasks.push(object);
+//   },
+//   markAsDone(index) {
+//     this.tasks[index].isActive = true;
+//   },
+//   listTasks() {
+//     for (let i = 0; i < this.tasks.length; i += 1) {
+//       console.log(this.tasks[i]);
+//     }
+//   },
+// };
+
+// toDoList.addTask('Hello world');
+// toDoList.addTask('Hello world');
+// toDoList.addTask('Hello world');
+// toDoList.addTask('Hello world');
+// toDoList.markAsDone(0);
+// toDoList.listTasks();
+
 // Створити об'єкт **bankAccount**:
 
 // - **Властивості**:
@@ -454,6 +498,54 @@ console.log(contactBook.contacts);
 //   - `checkBalance()` - метод, що повертає поточний баланс.
 
 // ---
+// const bankAccount = {
+//   balance: 500,
+//   deposit(amount) {
+//     this.balance += amount;
+//   },
+//   withdraw(amount) {
+//     if (this.balance >= amount) this.balance -= amount;
+//   },
+//   checkBalance() {
+//     return this.balance;
+//   },
+// };
+
+// bankAccount.deposit(1000);
+// console.log(bankAccount.balance);
+// bankAccount.withdraw(250);
+// console.log(bankAccount.balance);
+// console.log(bankAccount.checkBalance());
+
+// const myHome = {
+//   room1: [],
+//   room2: [],
+//   room3: [],
+//   playChild1(toy) {
+//     this.room1.push(toy);
+//   },
+//   playchild2(toy) {
+//     this.room2.push(toy);
+//   },
+//   playChild3(toy) {
+//     this.room3.push(toy);
+//   },
+//   cleanMyHome() {
+//     this.room1 = [];
+//     this.room2 = [];
+//     this.room3 = [];
+//   },
+// };
+
+// myHome.playChild1('car toy');
+// myHome.playchild2('Truck toy');
+// myHome.playChild3('Airplane toy');
+// console.log(myHome.room1);
+// console.log(myHome.room2);
+// console.log(myHome.room3);
+
+// myHome.cleanMyHome();
+// console.log(myHome);
 
 // Створити об'єкт **libraryCatalog**:
 
@@ -468,6 +560,29 @@ console.log(contactBook.contacts);
 //   - `listBooks()` - метод, що виводить список всіх книг.
 
 // ---
+
+const libraryCatalog = {
+  books: [],
+  addBook(book) {
+    this.books.push(book);
+  },
+  findBookByAuthor(author) {
+    const booksArray = [];
+    for (let i = 0; i < this.books.length; i += 1) {
+      if (this.books[i].author === author) {
+        booksArray.push(this.books[i]);
+      }
+    }
+    return booksArray;
+  },
+  findBookByISBN(isbn) {
+    for (let i = 0; i < this.books.length; i += 1) {
+      if (this.books[i].isbn === isbn) {
+        return this.books[i];
+      }
+    }
+  },
+};
 
 // Створити об'єкт **temperatureConverter**:
 
