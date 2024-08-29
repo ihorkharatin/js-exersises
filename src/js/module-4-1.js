@@ -561,28 +561,56 @@ const user4 = task1('Petro', 21);
 
 // ---
 
-const libraryCatalog = {
-  books: [],
-  addBook(book) {
-    this.books.push(book);
-  },
-  findBookByAuthor(author) {
-    const booksArray = [];
-    for (let i = 0; i < this.books.length; i += 1) {
-      if (this.books[i].author === author) {
-        booksArray.push(this.books[i]);
-      }
-    }
-    return booksArray;
-  },
-  findBookByISBN(isbn) {
-    for (let i = 0; i < this.books.length; i += 1) {
-      if (this.books[i].isbn === isbn) {
-        return this.books[i];
-      }
-    }
-  },
-};
+// const libraryCatalog = {
+//   books: [],
+//   addBook(book) {
+//     this.books.push(book);
+//   },
+//   findBookByAuthor(author) {
+//     const booksArray = [];
+//     for (let i = 0; i < this.books.length; i += 1) {
+//       if (this.books[i].author === author) {
+//         booksArray.push(this.books[i]);
+//       }
+//     }
+//     return booksArray;
+//   },
+//   findBookByISBN(isbn) {
+//     for (let i = 0; i < this.books.length; i += 1) {
+//       if (this.books[i].isbn === isbn) {
+//         return this.books[i];
+//       }
+//     }
+//   },
+//   listBooks() {
+//     for (let i = 0; i < this.books.length; i += 1) {
+//       console.log(this.books[i]);
+//     }
+//   },
+// };
+
+// libraryCatalog.addBook({
+//   title: 'Harry Potter',
+//   author: 'Kipling',
+//   isbn: 123,
+// });
+// libraryCatalog.addBook({
+//   title: 'Harry Spenser',
+//   author: 'Kipling56',
+//   isbn: 123,
+// });
+// libraryCatalog.addBook({
+//   title: 'Harry Potterdf',
+//   author: 'Kipling45',
+//   isbn: 129,
+// });
+// libraryCatalog.addBook({
+//   title: 'Harry raynold',
+//   author: 'Kipling',
+//   isbn: 127,
+// });
+
+// libraryCatalog.listBooks();
 
 // Створити об'єкт **temperatureConverter**:
 
@@ -593,6 +621,17 @@ const libraryCatalog = {
 //     Фаренгейта та повертає її в градусах Цельсія.
 
 // ---
+// const temperatureConverter = {
+//   celsiusToFahrenheit(celsius) {
+//     return celsius * 1.8 + 32;
+//   },
+//   fahrenheitToCelsius(fahrenheit) {
+//     return (fahrenheit - 32) / 1.8;
+//   },
+// };
+
+// const userValue = 26;
+// console.log(temperatureConverter.celsiusToFahrenheit(userValue));
 
 // Створити об'єкт **shoppingCart**:
 
@@ -605,6 +644,37 @@ const libraryCatalog = {
 //   - `listItems()` - метод, що виводить список всіх товарів у кошику.
 
 // ---
+
+// const shoppingCart = {
+//   items: [],
+//   addItem(item) {
+//     this.items.push(item);
+//   },
+//   totalCost() {
+//     let price = 0;
+//     for (let i = 0; i < this.items.length; i += 1) {
+//       price += this.items[i].price;
+//     }
+//     return price;
+//   },
+//   listItems() {
+//     //     for ( let i = 0; i < this.items.length; i += 1) {
+//     // console.log(this.items[i]);
+
+//     // }
+//     console.table(this.items);
+//   },
+// };
+
+// shoppingCart.addItem({ title: 'book', idNumber: 2301, weight: 2, price: 20 });
+// shoppingCart.addItem({ title: 'book', idNumber: 2301, weight: 2, price: 20 });
+// shoppingCart.addItem({ title: 'book', idNumber: 2301, weight: 2, price: 20 });
+// shoppingCart.addItem({ title: 'book', idNumber: 2301, weight: 2, price: 20 });
+// shoppingCart.addItem({ title: 'book', idNumber: 2301, weight: 2, price: 20 });
+// shoppingCart.addItem({ title: 'book', idNumber: 2301, weight: 2, price: 20 });
+// shoppingCart.addItem({ title: 'book', idNumber: 2301, weight: 2, price: 20 });
+// shoppingCart.listItems();
+// console.log(shoppingCart.totalCost());
 
 // Створити об'єкт **socialNetworkUser**:
 
@@ -619,6 +689,58 @@ const libraryCatalog = {
 //   - `listFriends()` - метод, що виводить список всіх друзів.
 
 // ---
+
+// const socialNetworkUser = {
+//   userName: 'Petro',
+//   userFriends: [],
+//   addFriend(friend) {
+//     this.userFriends.push(friend);
+//   },
+//   removeFriend(friendName) {
+//     for (let i = 0; i < this.userFriends.length; i += 1) {
+//       if (this.userFriends[i].userName === friendName) {
+//         this.userFriends.splice(i, 1);
+//       }
+//     }
+//   },
+//   listFriends() {
+//     console.table(this.userFriends);
+//   },
+// };
+
+// socialNetworkUser.addFriend({
+//   userName: 'petro1',
+//   userAge: 26,
+//   userWeight: 67,
+// });
+// socialNetworkUser.addFriend({
+//   userName: 'petro2',
+//   userAge: 26,
+//   userWeight: 67,
+// });
+// socialNetworkUser.addFriend({
+//   userName: 'petro3',
+//   userAge: 26,
+//   userWeight: 67,
+// });
+// socialNetworkUser.addFriend({
+//   userName: 'petro4',
+//   userAge: 26,
+//   userWeight: 67,
+// });
+// socialNetworkUser.addFriend({
+//   userName: 'petro5',
+//   userAge: 26,
+//   userWeight: 67,
+// });
+// socialNetworkUser.addFriend({
+//   userName: 'petro6',
+//   userAge: 26,
+//   userWeight: 67,
+// });
+// socialNetworkUser.listFriends();
+// socialNetworkUser.removeFriend('petro1');
+// socialNetworkUser.listFriends();
 
 // Створити об'єкт **musicPlayer**:
 
