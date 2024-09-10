@@ -410,28 +410,194 @@ const books = [
 // console.log(task12);
 
 // 1. Створити масив років видання всіх книжок з доданими 5 роками до кожного.
+
+// const task13 = books.map(item => {
+//   return item.year + 5;
+// });
+// console.log(task13);
+
 // 1. Створити масив об'єктів, які містять назву книжки та її рейтинг у відсотках
 //    (помножений на 10).
+
+// const taskk14 = books.map(item => {
+//   const booksCopy = {
+//     bookName: item.title,
+//     bookrating: item.rating * 10,
+//   };
+//   return booksCopy;
+// });
+
+// console.log(taskk14);
+
 // 1. Створити масив об'єктів, де назва книжки буде в верхньому регістрі.
+
+// const task15 = books.map(item => {
+//   const booksCopy = {
+//     ...item,
+//     title: item.title.toUpperCase(),
+//   };
+//   return booksCopy;
+// });
+
+// console.log(task15);
+
 // 1. Створити масив рядків, що містять інформацію про кожну книжку в форматі
 //    "назва - автор".
+
+// const task16 = books.map(item => {
+//   const bookCopy = `${item.title} - ${item.author}`;
+//   return bookCopy;
+// });
+
+// console.log(task16);
+
 // 1. Створити масив об'єктів, де кожна книжка буде мати нове поле `discountPrice`,
 //    що дорівнює ціні зі знижкою 10%.
+
+// const task18 = books.map(item => {
+//   const copyBook = {
+//     ...item,
+//     discountprice: item.price * 0.9,
+//   };
+//   return copyBook;
+// });
+
+// console.log(task18);
+
 // 1. Створити масив об'єктів, що містять назву книжки та її ціну з доданим
 //    податком 15%.
+
+// const task19 = books.map(item => {
+//   const bookCopy = {
+//     bookName: item.title,
+//     bookPrice: item.price,
+//     bookVat: item.price * 0.15,
+//     bookTotal: item.price * 1.15,
+//   };
+//   return bookCopy;
+// });
+
+// console.log(task19);
+
 // 1. Створити масив назв книжок, які видані після 2000 року.
+
+// const task20 = books
+//   .filter(item => item.year > 1900)
+//   .map(item => {
+//     return item.title;
+//   });
+
+// console.log(task20);
+
 // 1. Створити масив об'єктів, де кожна книжка буде мати нове поле `isClassic`, що
 //    дорівнює `true`, якщо книжка видана до 1950 року.
+
+// const task21 = books
+//   .filter(item => item.year < 1950)
+//   .map(item => {
+//     const copyBook = {
+//       ...item,
+//       isClassic: true,
+//     };
+//     return copyBook;
+//   });
+
+// console.log(task21);
+
+// const task22 = books.map(item => {
+// if (item.year < 1950) ;
+// return true;
+//   const newObj = {
+//     ...item,
+//   };
+//   if (item.year < 1950) {
+//     newObj.isClassic = true;
+//   } else {
+//     newObj.isClassic = false;
+//   }
+//   return newObj;
+// });
+
+// console.log(task22);
+
 // 1. Отримати масив жанрів всіх книжок у верхньому регістрі.
+
+// const task23 = books.map(item => {
+//   return item.genre.toUpperCase();
+// });
+
+// console.log(task23);
+
 // 1. Створити масив назв книжок, де всі слова в назві починаються з великої
 //    літери.
+
+// const task24 = books.map(item => {
+//   return item.title[0].toUpperCase() + item.title.slice(1).toLocaleLowerCase();
+// });
+
+// console.log(task24);
+
 // 1. Створити масив об'єктів, що містять лише автора та рік видання кожної книжки.
-// 1. Створити масив цін книжок, конвертованих з доларів у євро (курс 1 долар =
-//    0.85 євро).
+
+// const task25 = books.map(item => {
+//   const newArray = {
+//     bookAthor: item.author,
+//     bookYear: item.year,
+//   };
+//   return newArray;
+// });
+
+// console.log(task25);
+
+// 1. Створити масив цін книжок, конвертованих з доларів у євро (курс 1 долар = 0.85 євро).
+
+// const task26 = books.map(item => {
+//   return item.price * 0.85;
+// });
+
+// console.log(task26);
+
+//
 // 1. Створити масив назв книжок з доданим в кінці рядком "(Special Edition)".
+
+// const task27 = books.map(item => {
+//   return item.title + '(Special Edition)';
+// });
+
+// console.log(task27);
+
 // 1. Створити масив об'єктів, де кожна книжка буде мати нове поле `shortTitle`, що
 //    містить тільки перше слово з назви.
+
+// const task28 = books.map(item => {
+//   const newObj = {
+//     shortTitle: item.title.split(' ')[0],
+//   };
+//   return newObj;
+// });
+
+// console.log(task28);
+
 // 1. Створити масив об'єктів, де кожна книжка буде мати нове поле `description`,
 //    що містить рядок "Ця книга від автора [author] була видана у [year] році".
+
+// const task29 = books.map(item => {
+//   const newObj = {
+//     ...item,
+//     description: `This book from ${item.author} was published in ${item.year}`,
+//   };
+//   return newObj;
+// });
+// console.log(task29);
+
 // 1. Створити масив об'єктів, що містять лише назву та жанр кожної книжки, де жанр
 //    записаний у нижньому регістрі.
+
+const task30 = books.map(item => {
+  const newObj = {
+    bookname: item.title,
+    bookGenre: item.genre.toLowerCase(),
+  };
+  return newObj;
+});
+console.log(task30);
