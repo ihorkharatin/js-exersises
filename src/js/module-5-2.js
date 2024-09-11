@@ -593,11 +593,105 @@ const books = [
 // 1. Створити масив об'єктів, що містять лише назву та жанр кожної книжки, де жанр
 //    записаний у нижньому регістрі.
 
-const task30 = books.map(item => {
-  const newObj = {
-    bookname: item.title,
-    bookGenre: item.genre.toLowerCase(),
-  };
-  return newObj;
-});
-console.log(task30);
+// const task30 = books.map(item => {
+//   const newObj = {
+//     bookname: item.title,
+//     bookGenre: item.genre.toLowerCase(),
+//   };
+//   return newObj;
+// });
+// console.log(task30);
+
+//  Відсортувати книги за роком видання від найдавнішого до найновішого.
+
+// const task31 = books.toSorted((book1, book2) => {
+//   return book2.year - book1.year;
+// });
+// console.table(task31);
+
+// 1. Відсортувати книги за ціною від найнижчої до найвищої.
+
+// const task32 = books.toSorted((one, two) => {
+//   return one.price - two.price;
+// });
+// console.table(task32);
+// 1. Відсортувати книги за рейтингом від найнижчого до найвищого.
+
+// const task33 = books.toSorted((one, two) => {
+//   return one.rating - two.rating;
+// });
+
+// console.table(task33);
+// 1. Відсортувати книги за назвою у алфавітному порядку (від А до Я).
+// const task34 = books.toSorted((book1, book2) => {
+//   return book1.title.localeCompare(book2.title);
+// });
+
+// console.table(task34);
+// 1. Відсортувати книги за автором у зворотньому алфавітному порядку (від Z до A).
+
+// const task35 = books.toSorted((book3, book4) => {
+//   return book4.author.localeCompare(book3.title);
+// });
+
+// console.table(task35);
+// 1. Відсортувати книги за жанром у алфавітному порядку, але книги одного жанру за
+//    назвою у зворотньому алфавітному порядку.
+
+// const task36 = books.toSorted((book1, book2) => {
+//   if (book1.genre === book2.genre) {
+//     return book2.title.localeCompare(book1.title);
+//   }
+
+//   return book1.genre.localeCompare(book2.genre);
+// });
+// console.table(task36);
+
+// 1. Відсортувати книги за назвою у алфавітному порядку, але книги з однаковою
+//    назвою за автором у зворотньому алфавітному порядку.
+
+// const task37 = books.toSorted((book1, book2) => {
+//   if (book1.title === book2.title) {
+//     return book2.author.localeCompare(book1.author);
+//   } else {
+//     book1.title.localeCompare(book2.title);
+//   }
+// });
+// console.table(task37);
+
+// 1. Відсортувати книги за ціною, але спочатку розташувати ті, які коштують менше
+//    10 доларів, потім решту.
+
+// const task38 = books.toSorted((book1, book2) => {
+//   return book1.price - book2.price;
+// });
+
+// console.table(task38);
+// 1. Відсортувати книги за рейтингом, але спочатку розташувати ті, які мають
+//    рейтинг 4.8 і вище, потім решту.
+
+// const task39 = books
+//   .toSorted((book1, book2) => {
+//     return book1.rating - book2.rating;
+//   })
+//   .toSorted(book1 => {
+//     if (book1.rating >= 4.8) {
+//       return -1;
+//     } else {
+//       return 1;
+//     }
+//   });
+
+// console.table(task39);
+
+// 1. Відсортувати книги спочатку за жанром, а потім за роком видання.
+
+// const task40 = books
+//   .toSorted((book1, book2) => {
+//     return book1.year - book2.year;
+//   })
+//   .toSorted((book1, book2) => {
+//     return book1.genre.localeCompare(book2.genre);
+//   });
+
+// console.table(task40);
