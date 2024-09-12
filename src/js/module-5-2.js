@@ -875,19 +875,19 @@ const books = [
 
 // 1. Отримати всі книги жанру 'Historical' з рейтингом вище 4.7, відсортувати їх
 //    за роком видання від найдавнішого до найновішого та вивести останні 3 книги.
-function newBook(genre, rating) {
-  const task49 = books
-    .filter(item => {
-      return item.genre === genre && item.rating === rating;
-    })
-    .toSorted((book1, book2) => {
-      return book1.year - book2.year;
-    })
-    .slice(-3);
+// function newBook(genre, rating) {
+//   const task49 = books
+//     .filter(item => {
+//       return item.genre === genre && item.rating === rating;
+//     })
+//     .toSorted((book1, book2) => {
+//       return book1.year - book2.year;
+//     })
+//     .slice(-3);
 
-  return task49;
-}
+//   return task49;
+// }
 
-const newBookGenre = newBook('Historical', 4.7);
+// const newBookGenre = newBook('Historical', 4.7);
 
-console.table(newBookGenre);
+// console.table(newBookGenre);
