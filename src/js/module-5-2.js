@@ -695,3 +695,199 @@ const books = [
 //   });
 
 // console.table(task40);
+
+// Отримати всі книги, видані після 2000 року та відсортувати їх за рейтингом
+//    від найвищого до найнижчого, повернути лише назви.
+
+// function getBook(bookYear) {
+//   const task41 = books
+//     .filter(item => {
+//       return item.year > bookYear;
+//     })
+//     .toSorted((book1, book2) => {
+//       return book1.rating - book2.rating;
+//     })
+//     .map(item => {
+//       const newObj = {
+//         bookYear: item.year,
+//         bookName: item.title,
+//       };
+
+//       return newObj;
+//     });
+//   return task41;
+// }
+
+// const x = getBook(1500);
+// const y = getBook(1900);
+
+// console.table(x);
+// console.table(y);
+
+// 1. Отримати всі книги, автором яких є 'Fyodor Dostoevsky', відсортувати їх за
+//    роком видання від найдавнішого до найновішого та вивести перші 5 книг.
+
+// function newBooks(bookAuthor) {
+//   const task42 = books
+//     .filter(item => {
+//       return item.author === bookAuthor;
+//     })
+//     .toSorted((book1, book2) => {
+//       return book1.year - book2.year;
+//     })
+//     .slice(0, 5);
+//   return task42;
+// }
+// const newAuthor = newBooks('Fyodor Dostoevsky');
+
+// console.table(newAuthor);
+
+// 1. Отримати всі книги з ціною меншою ніж 10 доларів, відсортувати їх за ціною
+//    від найнижчої до найвищої та вивести назви книг.
+
+// function newBooks(priceBook) {
+//   const task43 = books
+//     .filter(item => {
+//       return item.price < priceBook;
+//     })
+//     .toSorted((price1, price2) => {
+//       return price1.price - price2.price;
+//     })
+//     .map(item => {
+//       const newObj = {
+//         bookName: item.title,
+//         bookPrice: item.price,
+//       };
+//       return newObj;
+//     });
+//   return task43;
+// }
+
+// const NewBooksPrice = newBooks(10);
+
+// console.table(NewBooksPrice);
+
+// 1. Отримати всі книги з рейтингом 4.8 і вище, відсортувати їх за автором у
+//    зворотньому алфавітному порядку та вивести авторів унікальних книг.
+
+// function bookRating(ratingBook) {
+//   const task44 = books
+//     .filter(item => {
+//       return item.rating >= ratingBook;
+//     })
+//     .toSorted((book1, book2) => {
+//       return book2.author - book1.author;
+//     })
+//     .map(item => {
+//       const newObj = {
+//         bookAuthor: item.author,
+//       };
+//       return newObj;
+//     })
+//     .filter((item, index, array) => {
+//       const firstIndex = array.findIndex(book => {
+//         return book.bookAuthor === item.bookAuthor;
+//       });
+//       return firstIndex === index;
+//     });
+//   return task44;
+// }
+
+// const newBookRating = bookRating(4.8);
+
+// console.table(newBookRating);
+
+// 1. Отримати всі книги жанру 'Romance' з ціною меншою ніж 8 доларів та
+//    відсортувати їх за рейтингом від найвищого до найнижчого.
+
+// function newBook(newGenre, newPrice) {
+//   const task45 = books
+//     .filter(item => {
+//       return item.genre === newGenre && item.price < newPrice;
+//     })
+//     .toSorted((book1, book2) => {
+//       return book1.rating - book2.rating;
+//     });
+//   return task45;
+// }
+
+// const newGenreBook = newBook('Romance', 8);
+
+// console.table(newGenreBook);
+
+// 1. Отримати всі книги, видані до 1900 року, відсортувати їх за рейтингом від
+//    найвищого до найнижчого та вивести першу книгу.
+
+// function newBooks(oldYear) {
+//   const task46 = books
+//     .filter(item => {
+//       return item.year < oldYear;
+//     })
+//     .toSorted((book1, book2) => {
+//       return book1.rating - book2.rating;
+//     })[0];
+
+//   return task46;
+// }
+
+// const newArrayBooks = newBooks(1900);
+// console.table(newArrayBooks);
+
+// 1. Отримати всі книги, що містять слово 'and' у назві, відсортувати їх за роком
+//    видання від найдавнішого до найновішого та вивести останню книгу.
+
+// function newBooks(newWord) {
+//   const task47 = books
+//     .filter(item => {
+//       return item.title.includes(newWord);
+//     })
+//     .toSorted((book1, book2) => {
+//       return book1.year - book2.year;
+//     })
+//     .slice(-1);
+
+//   return task47;
+// }
+
+// const lastBook = newBooks('and');
+
+// console.table(lastBook);
+
+// 1. Отримати всі книги, автором яких є 'J.R.R. Tolkien', відсортувати їх за
+//    рейтингом від найвищого до найнижчого та вивести середній рейтинг.
+
+// function newBook(newAuthor) {
+//   const task48 = books
+//     .filter(item => {
+//       return item.author === newAuthor;
+//     })
+//     .toSorted((book1, book2) => {
+//       return book1.rating - book2.rating;
+//     })
+//     .reduce((result, item, index, array) => {
+//       return result + item.rating / array.length;
+//     }, 0);
+
+//   return task48;
+// }
+// const newAuthorBooks = newBook('J.R.R. Tolkien');
+// console.table(newAuthorBooks);
+
+// 1. Отримати всі книги жанру 'Historical' з рейтингом вище 4.7, відсортувати їх
+//    за роком видання від найдавнішого до найновішого та вивести останні 3 книги.
+function newBook(genre, rating) {
+  const task49 = books
+    .filter(item => {
+      return item.genre === genre && item.rating === rating;
+    })
+    .toSorted((book1, book2) => {
+      return book1.year - book2.year;
+    })
+    .slice(-3);
+
+  return task49;
+}
+
+const newBookGenre = newBook('Historical', 4.7);
+
+console.table(newBookGenre);
