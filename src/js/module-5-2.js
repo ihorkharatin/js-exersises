@@ -891,3 +891,355 @@ const books = [
 // const newBookGenre = newBook('Historical', 4.7);
 
 // console.table(newBookGenre);
+
+const cars = [
+  {
+    brand: 'Toyota',
+    model: 'Camry',
+    year: 2019,
+    color: 'Silver',
+    price: 25000,
+    amount: 3,
+    isSportCar: false,
+    type: 'Sedan',
+  },
+  {
+    brand: 'Honda',
+    model: 'Accord',
+    year: 2020,
+    color: 'White',
+    price: 28000,
+    amount: 5,
+    isSportCar: false,
+    type: 'Sedan',
+  },
+  {
+    brand: 'Ford',
+    model: 'Mustang',
+    year: 2021,
+    color: 'Red',
+    price: 50000,
+    amount: 2,
+    isSportCar: true,
+    type: 'Coupe',
+  },
+  {
+    brand: 'Chevrolet',
+    model: 'Camaro',
+    year: 2018,
+    color: 'Black',
+    price: 45000,
+    amount: 1,
+    isSportCar: true,
+    type: 'Coupe',
+  },
+  {
+    brand: 'BMW',
+    model: 'M5',
+    year: 2022,
+    color: 'Blue',
+    price: 70000,
+    amount: 2,
+    isSportCar: true,
+    type: 'Sedan',
+  },
+  {
+    brand: 'Mercedes-Benz',
+    model: 'E-Class',
+    year: 2020,
+    color: 'Silver',
+    price: 60000,
+    amount: 3,
+    isSportCar: false,
+    type: 'Sedan',
+  },
+  {
+    brand: 'Audi',
+    model: 'A4',
+    year: 2021,
+    color: 'Gray',
+    price: 45000,
+    amount: 0,
+    isSportCar: false,
+    type: 'Sedan',
+  },
+  {
+    brand: 'Lamborghini',
+    model: 'Huracan',
+    year: 2023,
+    color: 'Yellow',
+    price: 300000,
+    amount: 1,
+    isSportCar: true,
+    type: 'Coupe',
+  },
+  {
+    brand: 'Ferrari',
+    model: '488 GTB',
+    year: 2022,
+    color: 'Red',
+    price: 350000,
+    amount: 1,
+    isSportCar: true,
+    type: 'Coupe',
+  },
+  {
+    brand: 'Porsche',
+    model: '911',
+    year: 2021,
+    color: 'White',
+    price: 120000,
+    amount: 2,
+    isSportCar: true,
+    type: 'Coupe',
+  },
+  {
+    brand: 'Toyota',
+    model: 'Golf',
+    year: 2020,
+    color: 'Black',
+    price: 20000,
+    amount: 6,
+    isSportCar: false,
+    type: 'Hatchback',
+  },
+  {
+    brand: 'Subaru',
+    model: 'Forester',
+    year: 2021,
+    color: 'Green',
+    price: 30000,
+    amount: 3,
+    isSportCar: false,
+    type: 'SUV',
+  },
+  {
+    brand: 'Jeep',
+    model: 'Wrangler',
+    year: 2022,
+    color: 'Orange',
+    price: 35000,
+    amount: 0,
+    isSportCar: false,
+    type: 'SUV',
+  },
+  {
+    brand: 'Mazda',
+    model: 'CX-5',
+    year: 2020,
+    color: 'Red',
+    price: 28000,
+    amount: 5,
+    isSportCar: false,
+    type: 'SUV',
+  },
+  {
+    brand: 'Kia',
+    model: 'Soul',
+    year: 2021,
+    color: 'Yellow',
+    price: 20000,
+    amount: 4,
+    isSportCar: false,
+    type: 'Hatchback',
+  },
+  {
+    brand: 'Toyota',
+    model: 'Tucson',
+    year: 2022,
+    color: 'White',
+    price: 30000,
+    amount: 3,
+    isSportCar: false,
+    type: 'SUV',
+  },
+  {
+    brand: 'Nissan',
+    model: 'Sentra',
+    year: 2019,
+    color: 'Silver',
+    price: 22000,
+    amount: 3,
+    isSportCar: false,
+    type: 'Sedan',
+  },
+  {
+    brand: 'Volvo',
+    model: 'XC60',
+    year: 2020,
+    color: 'Blue',
+    price: 40000,
+    amount: 2,
+    isSportCar: false,
+    type: 'SUV',
+  },
+  {
+    brand: 'Lexus',
+    model: 'RX',
+    year: 2021,
+    color: 'Black',
+    price: 50000,
+    amount: 2,
+    isSportCar: false,
+    type: 'SUV',
+  },
+  {
+    brand: 'Land Rover',
+    model: 'Range Rover Evoque',
+    year: 2022,
+    color: 'Gray',
+    price: 60000,
+    amount: 0,
+    isSportCar: false,
+    type: 'SUV',
+  },
+];
+
+// 1. Знайти всі машини з ціною вище 50000 і відсортувати їх за роком випуску від
+//    нових до старих.
+
+// function task50(highPrice) {
+//   const newCars = cars
+//     .filter(item => {
+//       return item.price > highPrice;
+//     })
+//     .toSorted((car1, car2) => {
+//       return car2.year - car1.year;
+//     });
+//   return newCars;
+// }
+
+// const checkCars = task50(50000);
+
+// console.table(checkCars);
+
+// 1. Створити новий масив, що містить лише моделі доступних для продажу машин.
+
+// function task51() {
+//   const newCarsArray = cars
+//     .filter(item => {
+//       return item.amount > 0;
+//     })
+//     .map(item => {
+//       return item.model;
+//     });
+//   return newCarsArray;
+// }
+
+// console.table(task51());
+
+// 1. Знайти першу машину, яка не є спортивною та має кількість на на складі більше
+//    0, потім повернути її колір.
+
+// function task52() {
+//   const firstCar = cars.find(item => {
+//     return item.amount > 0 && !item.isSportCar;
+//   });
+//   return firstCar.color;
+// }
+
+// console.table(task52());
+
+// 1. Порахувати загальну вартість всіх машин з кількістю на складі більше 2 і
+//    ціною менше 40 000.
+
+// function task53(setPrice) {
+//   let sum = 0;
+//   const array = cars
+//     .filter(item => {
+//       return item.amount > 2 && item.price < setPrice;
+//     })
+//     .forEach(item => {
+//       sum += item.price;
+//     });
+//   return sum;
+// }
+
+// console.table(task53(40000));
+
+// 1. Знайти всі машини певного типу (наприклад, SUV), відсортувати їх за роком
+//    випуску від старих до нових і повернути масив тільки зі своїми моделями.
+
+// function task54(typeCar) {
+//   const definiteCar = cars
+//     .filter(item => {
+//       return item.type === typeCar;
+//     })
+//     .toSorted((car1, car2) => {
+//       return car1.year - car2.year;
+//     })
+//     .map(item => {
+//       return item.model;
+//     });
+
+//   return definiteCar;
+// }
+
+// const findCar = task54('SUV');
+
+// console.table(findCar);
+
+// 1. Знайти всі спортивні машини з ціною вище 60000, відсортувати їх за спаданням
+//    ціни і повернути масив, що містить лише бренди та моделі цих машин.
+
+// function task55(setPrice) {
+//   const spartCars = cars
+//     .filter(item => {
+//       return item.isSportCar && item.price > setPrice;
+//     })
+//     .toSorted((car1, car2) => {
+//       return car2.price - car1.price;
+//     })
+//     .map(item => {
+//       const obj = {
+//         brandCar: item.brand,
+//         modelCar: item.model,
+//       };
+//       return obj;
+//     });
+//   return spartCars;
+// }
+
+// const newCars = task55(60000);
+
+// console.table(newCars);
+
+// 1. Знайти всі машини заданого кольору (наприклад, "Blue") та року випуску після
+//    2020, відсортувати їх за зростанням ціни та повернути масив, що містить лише
+//    моделі цих машин та ціну.
+
+// function task56(setColor, setYear) {
+//   const carsArray = cars
+//     .filter(item => {
+//       return item.color === setColor && item.year > setYear;
+//     })
+//     .toSorted((car1, car2) => {
+//       return car1.price - car2.price;
+//     })
+//     .map(item => {
+//       const obj = {
+//         modelCar: item.model,
+//         priceCar: item.price,
+//       };
+//       return obj;
+//     });
+
+//   return carsArray;
+// }
+
+// const findCars = task56('Blue', 2020);
+
+// console.table(findCars);
+
+// 1. Повернути масив, що містить лише кольори доступних для прродажу машин, та
+//    зробити щоб колір не повторювався дівчі.
+// 1. Знайти індекс першої машини з ціною менше 20000 та повернути масив, що
+//    містить тільки бренди та моделі машин після знайденої.
+// 1. Знайти всі машини з ціною між 40000 та 60000, відсортувати їх за роком
+//    випуску від нових до старих і повернути масив, що містить тільки моделі цих
+//    машин.
+// 1. Перевірити, чи є хоч одна машина з кількістю на складі більше 5 і ціною вище
+//    70 000.
+// 1. Знайти всі машини, у яких кількість на складі більша за 0, відсортувати їх по
+//    спаданню кількості та повернути масив, що містить тільки бренди та моделі цих
+//    машин.
