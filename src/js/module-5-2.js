@@ -1233,13 +1233,527 @@ const cars = [
 
 // 1. Повернути масив, що містить лише кольори доступних для прродажу машин, та
 //    зробити щоб колір не повторювався дівчі.
+
+// function task57() {
+//   const newArray = cars
+//     .filter(item => {
+//       return item.amount > 0;
+//     })
+//     .map(item => {
+//       return item.color;
+//     });
+//   const originalCar = new Set(newArray);
+//   return originalCar;
+// }
+
+// console.table(task57());
+
 // 1. Знайти індекс першої машини з ціною менше 20000 та повернути масив, що
 //    містить тільки бренди та моделі машин після знайденої.
+// function task58(setPrice) {
+//   const index = cars.findIndex(item => {
+//     return item.price < setPrice;
+//   });
+//   const newArrayCars = cars.slice(index).map(item => {
+//     const obj = {
+//       carBrand: item.brand,
+//       carModel: item.model,
+//     };
+//     return obj;
+//   });
+//   return newArrayCars;
+// }
+
+// const newBrandCars = task58(200000);
+
+// console.table(newBrandCars);
+
 // 1. Знайти всі машини з ціною між 40000 та 60000, відсортувати їх за роком
 //    випуску від нових до старих і повернути масив, що містить тільки моделі цих
 //    машин.
+
+// function task59(price1, price2) {
+//   const carPrice = cars
+//     .filter(item => {
+//       return item.price > price1 && item.price < price2;
+//     })
+//     .toSorted((car1, car2) => {
+//       return car1.year - car2.year;
+//     })
+//     .map(item => {
+//       return item.model;
+//     });
+
+//   return carPrice;
+// }
+
+// const newCars = task59(40000, 60000);
+// console.table(newCars);
+
 // 1. Перевірити, чи є хоч одна машина з кількістю на складі більше 5 і ціною вище
 //    70 000.
+
+// function task60(setAmount, setPrice) {
+//   const someCars = cars.some(item => {
+//     return item.amount > setAmount && item.price > setPrice;
+//   });
+
+//   return someCars;
+// }
+
+// const findCars = task60(5, 70000);
+// console.table(findCars);
+
 // 1. Знайти всі машини, у яких кількість на складі більша за 0, відсортувати їх по
 //    спаданню кількості та повернути масив, що містить тільки бренди та моделі цих
 //    машин.
+
+// function task61(setAmount) {
+//   const amountCars = cars
+//     .filter(item => {
+//       return item.amount > setAmount;
+//     })
+//     .toSorted((car1, car2) => {
+//       return car1.amount - car2.amount;
+//     })
+//     .map(item => {
+//       const obj = {
+//         carBrand: item.brand,
+//         carModel: item.model,
+//       };
+
+//       return obj;
+//     });
+//   return amountCars;
+// }
+
+// const newArray = task61(0);
+
+// console.table(newArray);
+
+const users = [
+  {
+    firstName: 'Alice',
+    lastName: 'Johnson',
+    age: 28,
+    email: 'alice@gmail.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Bob',
+    lastName: 'Smith',
+    age: 42,
+    email: 'bob@example.com',
+    isActive: false,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Eva',
+    lastName: 'Williams',
+    age: 35,
+    email: 'eva@example.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'David',
+    lastName: 'Brown',
+    age: 22,
+    email: 'david@gmail.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Sophia',
+    lastName: 'Davis',
+    age: 29,
+    email: 'sophia@gmail.com',
+    isActive: false,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Michael',
+    lastName: 'Miller',
+    age: 50,
+    email: 'michael@example.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Olivia',
+    lastName: 'Wilson',
+    age: 19,
+    email: 'olivia@gmail.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Daniel',
+    lastName: 'Thompson',
+    age: 31,
+    email: 'daniel@example.com',
+    isActive: false,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Ava',
+    lastName: 'Harris',
+    age: 27,
+    email: 'ava@gmail.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'James',
+    lastName: 'Jackson',
+    age: 38,
+    email: 'james@example.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Emma',
+    lastName: 'Taylor',
+    age: 23,
+    email: 'emma@example.com',
+    isActive: false,
+    gender: 'Female',
+  },
+  {
+    firstName: 'William',
+    lastName: 'Anderson',
+    age: 45,
+    email: 'william@gmail.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Mia',
+    lastName: 'Martin',
+    age: 29,
+    email: 'mia@poshta.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Joseph',
+    lastName: 'Clark',
+    age: 33,
+    email: 'joseph@poshta.com',
+    isActive: false,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Charlotte',
+    lastName: 'Rodriguez',
+    age: 26,
+    email: 'charlotte@poshta.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'John',
+    lastName: 'Lopez',
+    age: 31,
+    email: 'john@example.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Amelia',
+    lastName: 'Lee',
+    age: 20,
+    email: 'amelia@example.com',
+    isActive: false,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Benjamin',
+    lastName: 'Gonzalez',
+    age: 40,
+    email: 'benjamin@example.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Chloe',
+    lastName: 'Hernandez',
+    age: 24,
+    email: 'chloe@example.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Daniel',
+    lastName: 'Young',
+    age: 37,
+    email: 'daniel@example.com',
+    isActive: false,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Olivia',
+    lastName: 'Miller',
+    age: 38,
+    email: 'olivia@example.com',
+    isActive: false,
+    gender: 'Female',
+  },
+  {
+    firstName: 'James',
+    lastName: 'Jones',
+    age: 29,
+    email: 'james@poshta.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Sophia',
+    lastName: 'Davis',
+    age: 31,
+    email: 'sophia@example.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'William',
+    lastName: 'Wilson',
+    age: 52,
+    email: 'william@poshta.com',
+    isActive: false,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Ava',
+    lastName: 'Taylor',
+    age: 19,
+    email: 'ava@example.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Michael',
+    lastName: 'Clark',
+    age: 40,
+    email: 'michael@example.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Emma',
+    lastName: 'Lee',
+    age: 27,
+    email: 'emma@poshta.com',
+    isActive: false,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Daniel',
+    lastName: 'Martinez',
+    age: 35,
+    email: 'daniel@example.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Isabella',
+    lastName: 'Hernandez',
+    age: 42,
+    email: 'isabella@poshta.com',
+    isActive: false,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Liam',
+    lastName: 'Garcia',
+    age: 26,
+    email: 'liam@example.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Mia',
+    lastName: 'Rodriguez',
+    age: 30,
+    email: 'mia@poshta.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Noah',
+    lastName: 'Lopez',
+    age: 24,
+    email: 'noah@example.com',
+    isActive: false,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Charlotte',
+    lastName: 'Perez',
+    age: 29,
+    email: 'charlotte@example.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Ethan',
+    lastName: 'Turner',
+    age: 37,
+    email: 'ethan@example.com',
+    isActive: true,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Amelia',
+    lastName: 'White',
+    age: 23,
+    email: 'amelia@poshta.com',
+    isActive: true,
+    gender: 'Female',
+  },
+  {
+    firstName: 'Alexander',
+    lastName: 'Jackson',
+    age: 41,
+    email: 'alexander@example.com',
+    isActive: false,
+    gender: 'Male',
+  },
+  {
+    firstName: 'Sofia',
+    lastName: 'Brown',
+    age: 33,
+    email: 'sofia@example.com',
+    isActive: true,
+    gender: 'Female',
+  },
+];
+
+// # USERS
+
+// 1. Знайти користувачів віком від 25 до 40 років.
+
+// function task62(fromAge, afterAge) {
+//   const findUsers = users.filter(item => {
+//     return item.age > fromAge && item.age < afterAge;
+//   });
+//   return findUsers;
+// }
+
+// const findNewUsers = task62(25, 40);
+// console.table(findNewUsers);
+
+// 1. Знайти всіх користувачів із активним статусом.
+
+// function task63() {
+//   const activeUser = users.filter(item => {
+//     return item.isActive;
+//   });
+
+//   return activeUser;
+// }
+
+// console.table(task63());
+
+// 1. Порахувати кількість користувачів молодше 30 років.
+
+// function task64(setAge) {
+//   const usersAmount = users.filter(item => {
+//     return item.age < setAge;
+//   }).length;
+
+//   return usersAmount;
+// }
+
+// const newUsers = task64(30);
+// console.log(newUsers);
+
+// 1. Відсортувати користувачів віком від старшого до молодшого.
+
+// function task65() {
+//   const userAge = users.toSorted((age1, age2) => {
+//     return age1.age - age2.age;
+//   });
+
+//   return userAge;
+// }
+
+// console.table(task65());
+
+// 1. Знайти користувачів з електронною поштою на домені gmail.com.
+
+// function task66(setEmail) {
+//   const userEmail = users.filter(item => {
+//     return item.email.endsWith(setEmail);
+//   });
+//   return userEmail;
+// }
+
+// const newEmail = task66('gmail.com');
+
+// console.table(newEmail);
+
+// 1. Знайти всіх жінок серед користувачів.
+
+// function task67(womanGender) {
+//   const findWoman = users.filter(item => {
+//     return item.gender === womanGender;
+//   });
+
+//   return findWoman;
+// }
+
+// const newWoman = task67('Female');
+
+// console.table(newWoman);
+
+// 1. Порахувати кількість неактивних користувачів.
+
+// function task68() {
+//   const notActive = users.filter(item => {
+//     return !item.isActive;
+//   }).length;
+
+//   return notActive;
+// }
+
+// console.table(task68());
+
+// 1. Відсортувати користувачів на прізвище в алфавітному порядку.
+// function task69() {
+//   const sortUsers = users.toSorted((user1, user2) => {
+//     return user1.lastName.localeCompare(user2.lastName);
+//   });
+
+//   return sortUsers;
+// }
+
+// console.table(task69());
+
+// 1. Знайти користувача з найбільшим віком.
+
+// function task70() {
+//   const oldUser = users.toSorted((user1, user2) => {
+//     return user2.age - user1.age;
+//   })[0];
+//   return oldUser;
+// }
+
+// console.table(task70());
+// 1. Перевірити, чи є хоча б один користувач із прізвищем "Johnson".
+// 1. Створити новий масив, який містить лише імена користувачів.
+// 1. Створити масив з інформацією про користувачів у форматі JSON.
+// 1. Знайти індекс першого користувача під назвою "Jane".
+// 1. Знайти всіх користувачів чоловічої статі віком від 30 до 50 років.
+// 1. Порахувати загальну кількість користувачів.
+// 1. Знайти всіх користувачів з активним статусом та віком старше 25 років.
+// 1. Знайти користувачів із прізвищем, що починається на букву "S".
+// 1. Відсортувати користувачів за віком (від молодшого до старшого).
+// 1. Знайти всіх користувачів електронної пошти на домені yahoo.com.
+// 1. Знайти користувача з найменшим віком.
+// 1. Перевірити, чи є хоча б один користувач з ім'ям John.
+// 1. Створити новий масив, що містить лише прізвища користувачів.
+// 1. Створити масив з інформацією про користувачів як рядкових описів.
+// 1. Знайти індекс користувача з активним статусом і віком більшим або рівним 40
+//    років.
