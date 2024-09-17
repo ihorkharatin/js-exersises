@@ -1741,15 +1741,135 @@ const users = [
 // }
 
 // console.table(task70());
+
 // 1. Перевірити, чи є хоча б один користувач із прізвищем "Johnson".
+
+// function task71(userName) {
+//   const oneUser = users.some(item => {
+//     return item.lastName === userName;
+//   });
+
+//   return oneUser;
+// }
+
+// const searchUser = task71('Johnson');
+
+// console.log(searchUser);
+
 // 1. Створити новий масив, який містить лише імена користувачів.
+
+// function task72() {
+//   const newUsers = users.map(item => {
+//     const userName = `${item.firstName} ${item.lastName}`;
+//     return userName;
+//   });
+//   return newUsers;
+// }
+
+// console.log(task72());
+
+// function task72() {
+//   const newUsers = users.map(item => {
+//     return `<h1>${item.firstName} ${item.lastName}</h1>`;
+//   });
+//   return newUsers;
+// }
+
+// console.log(task72());
+
 // 1. Створити масив з інформацією про користувачів у форматі JSON.
+
+// function task73() {
+//   const newsArray = users.map(item => {
+//     return `{
+//     "firstName": "${item.firstName}",
+//     "lastName": "${item.lastName}",
+//     "age": ${item.age},
+//     "email": "${item.email}",
+//     "isActive": ${item.isActive},
+//     "gender": "${item.gender}"
+//     }`;
+//   });
+
+//   return newsArray;
+// }
+
+// console.log(task73().join('_\n'));
+
 // 1. Знайти індекс першого користувача під назвою "Jane".
+
+// function task74(userName) {
+//   const findUser = users.findIndex(item => {
+//     return item.firstName === userName;
+//   });
+//   return findUser;
+// }
+
+// const newUser = task74('Amelia');
+// console.log(newUser);
+
 // 1. Знайти всіх користувачів чоловічої статі віком від 30 до 50 років.
+
+// function task75(youngAge, oldAge, userGender) {
+//   const newMen = users.filter(item => {
+//     const manUser = item.gender === userGender;
+//     const manYoungAge = item.age > youngAge;
+//     const manOldAge = item.age < oldAge;
+//     return manUser && manYoungAge && manOldAge;
+//   });
+//   return newMen;
+// }
+
+// const newArrayMen = task75(30, 50, 'Male');
+
+// console.table(newArrayMen);
+
 // 1. Порахувати загальну кількість користувачів.
+
+// function task76() {
+//   const newArray = users.length;
+//   return newArray;
+// }
+// console.log(task76());
+
 // 1. Знайти всіх користувачів з активним статусом та віком старше 25 років.
+
+// function task77(setAge) {
+//   const newUsers = users.filter(item => {
+//     const activeUsers = item.isActive;
+//     const userAge = item.age > setAge;
+//     return activeUsers && userAge;
+//   });
+//   return newUsers;
+// }
+
+// const newArrayUsers = task77(25);
+// console.table(newArrayUsers);
+
 // 1. Знайти користувачів із прізвищем, що починається на букву "S".
+
+// function task78(setLetter) {
+//   const newUsers = users.filter(item => {
+//     const userLetter = item.lastName.startsWith(setLetter);
+//     return userLetter;
+//   });
+//   return newUsers;
+// }
+
+// const newObj = task78('S');
+// console.table(newObj);
+
 // 1. Відсортувати користувачів за віком (від молодшого до старшого).
+
+// function task79() {
+//   const sortUsers = users.toSorted((user1, user2) => {
+//     return user1.age - user2.age;
+//   });
+//   return sortUsers;
+// }
+
+// console.table(task79());
+
 // 1. Знайти всіх користувачів електронної пошти на домені yahoo.com.
 // 1. Знайти користувача з найменшим віком.
 // 1. Перевірити, чи є хоча б один користувач з ім'ям John.
