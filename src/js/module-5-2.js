@@ -1871,9 +1871,80 @@ const users = [
 // console.table(task79());
 
 // 1. Знайти всіх користувачів електронної пошти на домені yahoo.com.
+
+// function task80(setEmail) {
+//   const newArray = users.filter(item => {
+//     const emailUser = item.email.endsWith(setEmail);
+//     return emailUser;
+//   });
+//   return newArray;
+// }
+
+// const newUsers = task80('gmail.com');
+// console.table(newUsers);
+
 // 1. Знайти користувача з найменшим віком.
+
+// function task81() {
+//   const ageUser = users.toSorted((user1, user2) => {
+//     return user1.age - user2.age;
+//   })[0];
+//   return ageUser;
+// }
+
+// console.log(task81());
+
 // 1. Перевірити, чи є хоча б один користувач з ім'ям John.
+
+// function task82(setName) {
+//   const findUser = users.some(item => {
+//     const nameUser = item.firstName === setName;
+//     return nameUser;
+//   });
+//   return findUser;
+// }
+
+// const newUser = task82('John');
+
+// console.log(newUser);
+
 // 1. Створити новий масив, що містить лише прізвища користувачів.
+
+// function task83(setItem) {
+//   const newArray = users.map(item => {
+//     const usersName = item[setItem];
+//     return usersName;
+//   });
+//   return newArray;
+// }
+// console.table(task83('firstName'));
+
 // 1. Створити масив з інформацією про користувачів як рядкових описів.
+
+// function task84() {
+//   const newArray = users.map(item => {
+//     return `
+//     userName: ${item.firstName},
+//     surname: ${item.lastName},
+//     usrAge: ${item.age},
+//     Gender: ${item.gender},
+//     userEmail: ${item.email}`;
+//   });
+
+//   return newArray;
+// }
+
+// console.table(task84());
+
 // 1. Знайти індекс користувача з активним статусом і віком більшим або рівним 40
 //    років.
+
+// function task85(setAge) {
+//   const findUser = users.findIndex(item => {
+//     const newUser = item.isActive && item.age >= setAge;
+//     return newUser;
+//   });
+//   return findUser;
+// }
+// const findIndex = task85(40);
+// console.log(findIndex);
