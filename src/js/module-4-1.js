@@ -841,6 +841,23 @@ const user4 = task1('Petro', 21);
 
 // ---
 
+// const rectangle = {
+//   width: 5,
+//   height: 10,
+//   area() {
+//     return rectangle.width * rectangle.height;
+//   },
+//   perimeter() {
+//     return (rectangle.width + rectangle.height) * 2;
+//   },
+// };
+
+// const rectangleArea = rectangle.area();
+// console.log(rectangleArea);
+
+// const rectanglePerimeter = rectangle.perimeter();
+// console.log(rectanglePerimeter);
+
 // Створити об'єкт **toDoList**:
 
 // - **Властивості**:
@@ -853,6 +870,32 @@ const user4 = task1('Petro', 21);
 
 // ---
 
+// const toDoList = {
+//   tasks: [],
+//   addTask(task) {
+//     return toDoList.tasks.push(task);
+//   },
+//   markAsDone(taskName) {
+//     const findObj = toDoList.tasks.find(item => {
+//       return item.title === taskName;
+//     });
+//     findObj.isCompleted = true;
+//   },
+
+//   listTasks() {
+//     console.table(toDoList.tasks);
+//   },
+// };
+// toDoList.addTask({ title: 'Task1', isCompleted: false });
+// toDoList.addTask({ title: 'Task2', isCompleted: false });
+// toDoList.addTask({ title: 'Task3', isCompleted: false });
+
+// toDoList.listTasks();
+
+// toDoList.markAsDone('Task1');
+
+// toDoList.listTasks();
+
 // Створити об'єкт **bankAccount**:
 
 // - **Властивості**:
@@ -863,7 +906,29 @@ const user4 = task1('Petro', 21);
 //     перевіркою на достатність коштів).
 //   - `checkBalance()` - метод, що повертає поточний баланс.
 
-// ---
+// const bankAccount = {
+//   balance: 1000,
+//   deposit(amount) {
+//     bankAccount.balance += amount;
+//   },
+//   withdraw(amount) {
+//     if (bankAccount.balance >= amount) {
+//       bankAccount.balance -= amount;
+//     }
+//   },
+//   checkBalance() {
+//     return bankAccount.balance;
+//   },
+// };
+
+// bankAccount.deposit(1000);
+// console.log(bankAccount.balance);
+
+// bankAccount.withdraw(500);
+
+// console.log(bankAccount.balance);
+
+// console.log(bankAccount.checkBalance());
 
 // Створити об'єкт **libraryCatalog**:
 
@@ -878,6 +943,53 @@ const user4 = task1('Petro', 21);
 //   - `listBooks()` - метод, що виводить список всіх книг.
 
 // ---
+
+// const libraryCatalog = {
+//   books: [],
+//   addBook(book) {
+//     libraryCatalog.books.push(book);
+//   },
+//   findBookByAuthor(author) {
+//     const findBook = libraryCatalog.books.filter(item => {
+//       return item.bookAuthor === author;
+//     });
+//     return findBook;
+//   },
+//   findBookByISBN(isbn) {
+//     const bookIsbn = libraryCatalog.books.find(item => {
+//       return item.isbnNumber === isbn;
+//     });
+//     return bookIsbn;
+//   },
+//   listbooks() {
+//     console.table(libraryCatalog.books);
+//   },
+// };
+
+// libraryCatalog.addBook({
+//   bookAuthor: 'Kipling1',
+//   isbnNumber: 1256,
+//   price: 122,
+//   title: 'Porter1',
+// });
+// libraryCatalog.addBook({
+//   bookAuthor: 'Kipling2',
+//   isbnNumber: 1258,
+//   price: 128,
+//   title: 'Porter2',
+// });
+// libraryCatalog.addBook({
+//   bookAuthor: 'Kipling3',
+//   isbnNumber: 1263,
+//   price: 124,
+//   title: 'Porter3',
+// });
+
+// libraryCatalog.listbooks();
+
+// console.table(libraryCatalog.findBookByAuthor('Kipling1'));
+
+// console.table(libraryCatalog.findBookByISBN(1263));
 
 // Створити об'єкт **temperatureConverter**:
 
