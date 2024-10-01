@@ -1001,6 +1001,18 @@ const user4 = task1('Petro', 21);
 
 // ---
 
+// const obj = {
+//   celsiusToFahrenheit(celsius) {
+//     return (celsius * 9) / 5 + 32;
+//   },
+//   fahrenheitToCelsius(fahrenheit) {
+//     return ((fahrenheit - 32) * 5) / 9;
+//   },
+// };
+
+// console.log(obj.celsiusToFahrenheit(25));
+// console.log(obj.fahrenheitToCelsius(25));
+
 // Створити об'єкт **shoppingCart**:
 
 // - **Властивості**:
@@ -1012,6 +1024,33 @@ const user4 = task1('Petro', 21);
 //   - `listItems()` - метод, що виводить список всіх товарів у кошику.
 
 // ---
+
+// const shoppingCart = {
+//   items: [],
+//   addItem(item) {
+//     // shoppingCart.items.push(item);
+//     this.items.push(item);
+//   },
+//   totalCost() {
+//     let sum = 0;
+//     for (const item of this.items) {
+//       sum += item.price;
+//     }
+//     return sum;
+//   },
+//   listItems() {
+//     console.table(this.items);
+//   },
+// };
+
+// shoppingCart.addItem({ title: 'Bread', price: 10 });
+// shoppingCart.addItem({ title: 'tomato', price: 30 });
+// shoppingCart.addItem({ title: 'Cucumber', price: 40 });
+// console.log(shoppingCart.items);
+
+// console.log(shoppingCart.totalCost());
+
+// shoppingCart.listItems();
 
 // Створити об'єкт **socialNetworkUser**:
 
@@ -1027,6 +1066,34 @@ const user4 = task1('Petro', 21);
 
 // ---
 
+// const socialNetworkUser = {
+//   username: 'Tom',
+//   friends: [],
+//   addFriend(friendName) {
+//     this.friends.push(friendName);
+//   },
+//   removeFriend(friendName) {
+//     const findFriend = socialNetworkUser.friends.filter(item => {
+//       return item !== friendName;
+//     });
+//     this.friends = findFriend;
+//   },
+//   listFriends() {
+//     console.log(this.friends);
+//   },
+// };
+
+// socialNetworkUser.addFriend('Steve');
+// socialNetworkUser.addFriend('Tomas');
+// socialNetworkUser.addFriend('berkley');
+
+// console.log(socialNetworkUser.friends);
+
+// socialNetworkUser.removeFriend('Tomas');
+// console.log(socialNetworkUser.friends);
+
+// socialNetworkUser.listFriends();
+
 // Створити об'єкт **musicPlayer**:
 
 // - **Властивості**:
@@ -1040,6 +1107,39 @@ const user4 = task1('Petro', 21);
 //   - `previous()` - метод, що перемикає на попередню пісню.
 
 // ---
+
+// const musicPlayer = {
+//   songs: [],
+//   currentSong: 0,
+//   addSong(song) {
+//     this.songs.push(song);
+//   },
+//   play() {
+//     console.log(this.songs[this.currentSong], 'Play');
+//   },
+//   pause() {
+//     console.log(this.songs[this.currentSong], 'Pause');
+//   },
+//   next() {
+//     this.currentSong += 1;
+//   },
+//   previous() {
+//     this.currentSong -= 1;
+//   },
+// };
+
+// musicPlayer.addSong('The wind');
+// musicPlayer.addSong('The sun');
+// musicPlayer.addSong('The moon');
+
+// musicPlayer.play();
+// musicPlayer.next();
+// musicPlayer.play();
+// musicPlayer.previous();
+// musicPlayer.play();
+// musicPlayer.pause();
+
+//================================================
 
 // Створити об'єкт **myString**:
 
