@@ -1153,6 +1153,29 @@ const user4 = task1('Petro', 21);
 
 // ---
 
+// const myString = {
+//   reverse(str) {
+//     return str.split('').reverse().join('');
+//   },
+//   ucFirst(str) {
+//     return str[0].toUpperCase() + str.slice(1);
+//   },
+//   ucWords(str) {
+//     return str
+//       .split(' ')
+//       .map(item => {
+//         return this.ucFirst(item);
+//       })
+//       .join(' ');
+//   },
+// };
+
+// console.log(myString.reverse('Hello World'));
+
+// console.log(myString.ucFirst('hello to this world'));
+
+// console.log(myString.ucWords('hello to this world'));
+
 // Створити об'єкт **validator**:
 
 // - **Методи**:
@@ -1166,6 +1189,26 @@ const user4 = task1('Petro', 21);
 //     номером телефону. Повертає `true` або `false`.
 
 // ---
+
+// const validator = {
+//   isEmail(str) {
+//     return str.includes('@');
+//   },
+//   isDomain(str) {
+//     return str.includes('.com');
+//   },
+//   isDate(str) {
+//     return str.length === 10;
+//   },
+//   isPhone(str) {
+//     return str.includes('+380');
+//   },
+// };
+
+// console.log(validator.isEmail('@gmail'));
+// console.log(validator.isDomain('.com'));
+// console.log(validator.isDate('01.01.2024'));
+// console.log(validator.isPhone('+480'));
 
 // const array = [];
 // function addNumber(x) {
